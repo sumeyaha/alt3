@@ -1,0 +1,32 @@
+Initialize:
+    player_moves = []
+    computer_wins = 0
+    player_wins = 0
+    rounds = total number of rounds
+
+For each round from 1 to rounds:
+    Display "Choose: Rock (R), Paper (P), Scissors (S)"
+    player_choice = get player's choice
+
+    Append player_choice to player_moves
+    
+    If round > 1:
+        predicted_move = Get previous player move
+        computer_choice = Determine counter move for predicted_move
+    Else:
+        computer_choice = Randomly select (R, P, S)
+
+    Display computer_choice
+
+    If player_choice == computer_choice:
+        Display "It's a tie!"
+    Else If (player_choice == 'R' and computer_choice == 'P') or 
+             (player_choice == 'P' and computer_choice == 'S') or 
+             (player_choice == 'S' and computer_choice == 'R'):
+        Display "Computer wins!"
+        Increment computer_wins
+    Else:
+        Display "Player wins!"
+        Increment player_wins
+
+Display final score: "Computer: {computer_wins}, Player: {player_wins}"
